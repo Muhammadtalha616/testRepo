@@ -1,14 +1,411 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+
+        }
+
+        body {
+            padding: 0px;
+            margin: 0px;
+            background-color: #363543;
+            color: aliceblue;
+        }
+
+        #navbar {
+
+            display: flex;
+            align-items: center;
+        }
+
+        .hamburger {
+            background-color: #363543;
+            position: absolute;
+            right: 100px;
+        }
+
+        .hamburger img {
+            width: 100px;
+            height: 50px;
+            margin: 15px;
+        }
+
+        li {
+            color: #727281;
+            opacity: 0.8;
+            list-style: none;
+            margin-left: 20px;
+        }
+
+        .item-1 img {
+            width: 23px;
+            height: 22px;
+            margin-bottom: -2px;
+        }
+
+        .item-1,
+        .item-2 {
+            color: aliceblue;
+        }
+
+        .item-2 {
+            margin-left: 125px;
+
+        }
+
+        li h1 {
+            display: inline-block;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+        }
+
+        a:hover {
+            border-bottom: 2px solid rgb(255, 230, 0);
+            font-weight: bold;
+            padding: 0px;
+            margin: 0px;
+            color: rgb(255, 230, 0);
+        }
+
+        div.section {
+            display: flex;
+
+        }
+
+        .one {
+            width: 432px;
+            margin-left: 67px;
+        }
+
+        .one>p {
+            font-size: 31px;
+            margin: 0px;
+            padding: 0px;
+            line-height: 40px;
+        }
+
+        .one .myName {
+            width: -1px;
+            margin-top: 0px;
+            margin-bottom: 17px;
+            font-size: -webkit-xxx-large;
+        }
+
+        div.centerNavBar img {
+            width: 1107px;
+            position: relative;
+            right: -68px;
+            height: 90px;
+        }
+
+        img.mypic {
+            position: relative;
+            width: 419px;
+            height: 419px;
+            border-radius: 220px;
+            right: 23px;
+        }
+
+        hr {
+            height: 3px;
+            width: 117px;
+            background-color: #ffcf00;
+            margin-right: 446px
+        }
+
+        /* h1.myName{
+            margin-left: 70px;
+            margin-top: 5px;
+            padding-bottom: 20px;
+             border-bottom: 2px solid orange;
+        
+          }
+          p{
+            margin: 42px 70px 0px;
+           
+          }
+          .secondPara{
+            margin-top:10px;
+            font-size: 12px;
+            width: 18%;
+            line-height: 1.9;
+          } */
+        .three {
+            position: relative;
+            right: 84px;
+            top: 41px;
+        }
+
+        .thirdPara {
+            width: 205px;
+            word-spacing: 5px;
+            line-height: 21px;
+        }
+
+        p.seeMore {
+            color: rgb(255, 230, 0);
+        }
+
+        /*section{
+            position: relative;
+            right: -900px;
+            top:-250px;
+          } 
+          img{
+                border-radius: 37px;
+
+                height: 29px;
+                width: 35px;
+}
+*/
+        .fa {
+            font-size: 10px;
+            width: 20px;
+            height: 20px;
+            color: rgba(211, 167, 63, 255);
+            background-color: rgba(68, 67, 73, 255);
+            border-radius: 9px;
+            text-align: center;
+            padding-top: 3px;
+            margin-left: 7px;
+        }
+
+        #footerPara {
+            background-color: #282834;
+            display: flex;
+            position: relative;
+            top: -52px;
+            z-index: -1;
+        }
+
+        #footerPartOne {
+            margin-left: 75px;
+            margin-top: 117px;
+            width: 346px;
+        }
+
+        #footerPartTwo {
+            margin-top: 129px;
+            margin-left: 280px;
+        }
+
+        .yellow {
+            color: #ffcf00;
+        }
+
+        .footerPartOneafterh1 {
+            word-spacing: 6px;
+            line-height: 21px;
+        }
+
+        .footerPara2 {
+            position: absolute;
+            top: 297px;
+            left: 246px;
+        }
+
+        .footerPara4 {
+            position: absolute;
+            top: 350px;
+            left: 246px;
+        }
+
+        span.pic1 {
+            position: absolute;
+            top: 34%;
+            line-height: 25px;
+        }
+
+        span.pic2 {
+            position: absolute;
+            top: 57%;
+            line-height: 25px;
+            line-height: 25px;
+        }
+
+        span.pic3 {
+            position: absolute;
+            top: 83%;
+            line-height: 25px;
+        }
+
+        div>p>img {
+            width: 185px;
+            height: 100px;
+            border-radius: 11px
+        }
+
+        #footerPartTwo p {
+            border-bottom: 1px solid #837e7e;
+            width: 473px;
+        }
+
+        .centerNavBar2 {
+            display: none;
+        }
+
+        /*
+#myPic{
+     background-color: rgba(0, 0, 0, 0.075);
+    border-radius: 400px;
+    width: 400px;
+    height: 400px;
+    position: relative;
+    top: -434px;
+    left: 353px
+} */
+        @media only screen and (max-width: 800px) {
+            #navbar {
+                display: none;
+            }
+
+            .three {
+                position: absolute;
+                left: 68px;
+                top: 342px;
+            }
+
+            img.mypic {
+                position: absolute;
+                width: 300px;
+                height: 300px;
+                border-radius: 220px;
+                left: 79px;
+                top: 575px;
+            }
+
+            .centerNavBar {
+                display: none;
+            }
+
+            .centerNavBar2 {
+                left: 68px;
+                display: block;
+                position: relative;
+                top: 558px;
+                /* width: 200px; */
+            }
+
+            #footerPartOne {
+                position: absolute;
+                top: 481px;
+                margin-left: 75px;
+                margin-top: 200px;
+                width: 346px;
+            }
+
+            #footerPartTwo {
+                margin-top: 129px;
+                margin-left: 280px;
+                display: none;
+            }
+
+            .footerPara2 {
+                position: absolute;
+                top: 180px;
+                left: 218px;
+                width: 161px;
+            }
+
+            .footerPara4 {
+                position: absolute;
+                top: 230px;
+                left: 222px;
+            }
+
+            .forResponsive2 {
+                width: 340px;
+                height: 74px;
+                position: absolute;
+                left: 0px;
+                top: 69px;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
+
 <body>
-    <h1>test repo</h1>
-    <img src="./forResponsive2.jpg" alt="">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad ducimus reiciendis iusto enim illo, impedit dicta incidunt saepe quod qui tempora asperiores a dolores, similique corporis! Itaque aspernatur magnam illo!</p>
+    <div class="paren">
+        <header>
+            <nav>
+                <ul id="navbar">
+                    <li class="item-1"><img src="./examplearts/emojiForportfolio.png" width="20px" alt="">
+                        <h1>TALHA</h1>
+                    </li>
+                    <li class="item-2"><a href="#">Home</a></li>
+                    <li class="item-3"><a href="#">Portfolio</a></li>
+                    <li class="item-4"><a href="#">Testominal</a></li>
+                    <li class="item-5"><a href="#">About</a></li>
+                    <li class="hamburger"><img src="./Images/hamburger1.png" alt=""></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <!-- ==============================NAVIGATION BAR END===================================== -->
+    <div class="section">
+        <section class="one"> <!--section one start-->
+            <p>I'm</p>
+            <h1 class="myName">Muhammad Talha</h1>
+            <hr>
+            <p class="secondPara">A freelancer who provides services for digital
+                programing and design content needs,for all busniesses with more than
+                10 years of experience</p>
+        </section>
+        <!-- section two start -->
+        <section class="two">
+            <img src="./Images/Mypic.jpg" class="mypic" alt="">
+        </section>
+        <!-- section three start -->
+        <Section class="three">
+            <h4>Services</h4>
+            <p class="thirdPara">Let's build quality products in programing and design
+                with my services</p>
+            <p class="seeMore">see more &rarr;</p>
+
+            <div id="log">
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-twitter"></a>
+                <a href="#" class="fa fa-linkedin"></a>
+                <a href="#" class="fa fa-instagram"></a>
+            </div>
+
+        </Section>
+    </div>
+    <div class="centerNavBar"><img src="./Images/linkedln.jpg" alt=""></div>
+    <div class="centerNavBar2"><img src="./Images/forResponsive1.jpg" alt="">
+        <img class="forResponsive2" src="Images/forResponsive2.jpg" alt="">
+    </div>
+
+    <div id="footerPara">
+        <div id="footerPartOne">
+            <h1>What Can I Do For Your Needs</h1>
+            <p class="footerPartOneafterh1">It is easier to entrust the work to the experts because they are able to
+                provide the best results with reliabe quality.</p>
+            <p class="footerPara1"><span class="yellow">250+</span> <br>projects completed</p>
+            <p class="footerPara2"><span class="yellow">100+</span> <br>Community Network</p>
+            <p class="footerPara3"><span class="yellow">30+</span> <br>Contract Prompts</p>
+            <p class="footerPara4"><span class="yellow">10+</span> <br> Years experience</p>
+        </div>
+        <div id="footerPartTwo">
+            <p> <img src="./Images/uiuxdesign.jpg" alt=""><span class="pic1"><b>UV/UX Design</b> <br>117 projects</span>
+            </p>
+            <p> <img src="./Images/frontend.jpg" alt=""><span class="pic2"><b>Front End Develop</b> <br>84
+                    projects</span></p>
+            <p> <img src="./Images/backend copy.jpg" alt="" width="300px" height="200px"><span class="pic3"><b>Mobile
+                        App Develop&rarr;
+                        &rarr;
+                        &rarr;</b> <br>34 projects</span></p>
+        </div>
+    </div>
 </body>
+
 </html>

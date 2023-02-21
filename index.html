@@ -185,7 +185,7 @@
             top: -52px;
             z-index: -1;
             width: 100%;
-            height: 519px;
+            height: 740px;
         }
 
         #footerPartOne {
@@ -221,20 +221,20 @@
 
         span.pic1 {
             position: absolute;
-            top: 8%;
+            top: 6%;
             line-height: 25px;
         }
 
         span.pic2 {
             position: absolute;
-            top: 32%;
+            top: 23%;
             line-height: 25px;
             line-height: 25px;
         }
 
         span.pic3 {
             position: absolute;
-            top: 55%;
+            top: 39%;
             line-height: 25px;
         }
 
@@ -263,7 +263,7 @@
     top: -434px;
     left: 353px
 } */
-        @media only screen and (max-width: 800px) {
+        /* @media only screen and (max-width: 800px) {
             #navbar {
                 display: none;
             }
@@ -292,8 +292,8 @@
                 display: block;
                 position: relative;
                 top: 558px;
-                width: 200px;
-            }
+                /* width: 200px; */
+            /* }
 
             #footerPartOne {
                 position: absolute;
@@ -337,7 +337,34 @@
             z-index: -1;
             width: 100%;
         }
+        } */ 
+        .midNavBarLogo{
+              margin: auto;width: 1102px;height: 108px;
+               background-color: #403f51; display: flex;justify-content: space-around;
+               align-items: center;box-shadow: -1px 1px 6px 0px black;
         }
+        .midNavBarLogo span{
+          background-color:   #373644;width: 200px;height: 57px; text-align: center;
+          display: flex;align-items: center;justify-content: center;
+        }
+        b{
+            font-size: 24px;
+        }
+        .footer{
+             display: flex;justify-content: center;position: relative;top: -230px;
+        }
+        .footer img{
+            background-color: black;border-radius: 46px;
+            margin-top: 10px;margin-left: 10px;
+        }
+        .footer div{margin-left: 28px;
+                background-color: #403f51;
+            width: 350px;
+            height: 250px;
+            padding: 10px;
+            box-shadow: -1px 1px 6px 0px black;
+        }
+        
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
@@ -348,7 +375,7 @@
         <header>
             <nav>
                 <ul id="navbar">
-                    <li class="item-1"><img src="./examplearts/emojiForportfolio.png" width="20px" alt="">
+                    <li class="item-1"><img src="./Images/icons8-happy-50.png" width="20px" alt="">
                         <h1>TALHA</h1>
                     </li>
                     <li class="item-2"><a href="#">Home</a></li>
@@ -390,9 +417,15 @@
 
         </Section>
     </div>
-    <div class="centerNavBar"><img src="./Images/linkedln.jpg" alt=""></div>
+    <!-- <div class="centerNavBar"><img src="./Images/linkedln.jpg" alt=""></div>
     <div class="centerNavBar2"><img src="./Images/forResponsive1.jpg" alt="">
         <img class="forResponsive2" src="Images/forResponsive2.jpg" alt="">
+    </div> -->  
+    <div class="midNavBarLogo">
+        <span><img class="midNavBar" src="./images/icons8-meta-50.png" alt=""><b>Meta</b></span>
+        <span><img  class="midNavBar" src="./Images/googlepng.png" alt="" width="100px"></span>
+        <span><b>Linkedln</b><img class="midNavBar"  src="./Images/icons8-linkedin-24.png" alt=""></span>
+        <span><img class="midNavBar" src="./Images/icons8-slack-new-50.png" alt=""><b>Slack</b></span>
     </div>
 
     <div id="footerPara">
@@ -406,16 +439,37 @@
             <p class="footerPara4"><span class="yellow">10+</span> <br> Years experience</p>
         </div>
         <div id="footerPartTwo">
-            <p> <img src="./Images/uiuxdesign.jpg" alt=""><span class="pic1"><b>UV/UX Design</b> <br>117 projects</span>
+            <p> <img src="./Images/uiuxdesign.jpg" alt=""><span class="pic1"><b>UV/UX Design</b><span class="yellow">&rarr;</span> <br>117 projects</span>
             </p>
-            <p> <img src="./Images/frontend.jpg" alt=""><span class="pic2"><b>Front End Develop</b> <br>84
+            <p> <img src="./Images/frontend.jpg" alt=""><span class="pic2"><b>Front End Develop</b><span class="yellow">&rarr;</span><br>84
                     projects</span></p>
             <p> <img src="./Images/backend copy.jpg" alt="" width="300px" height="200px"><span class="pic3"><b>Mobile
-                        App Develop&rarr;
-                        &rarr;
-                        &rarr;</b> <br>34 projects</span></p>
+                        App Develop
+                        </b><span class="yellow">&rarr;</span> <br>34 projects</span></p>
         </div>
     </div>
+    <!-- footer Start -->
+    <div class="footer">
+        <div>
+            <img src="./Images/icons8-design-80.png" alt="">
+            <h1>Ul/UX Design</h1>
+            <p>Creat a beautiful and useful ui display for ease of use the application for users</p>
+        </div>
+        
+        <div>
+            <img src="./Images/icons8-responsive-design-80.png" alt="">
+            <h1>Web programing</h1>
+            <p>Build a quality website with the best technology and optimization on search engines</p>
+        </div>
+
+        <div>
+            <img src="./Images/icons8-computer-80.png" alt="">
+            <h1>Mobile Development</h1>
+            <p>Ceate an app from your own busniess for a more proessional busniess performance
+            </p>
+        </div>
+    </div>
+   <!-- Footer End -->
 </body>
 
 </html>

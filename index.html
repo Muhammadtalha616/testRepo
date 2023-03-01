@@ -89,15 +89,18 @@
         }
 
         .one {
+            position: relative;
+            top: 78px;
             width: 37%;
             margin-left: 5.5%;
         }
 
         .one>p {
-            font-size: 31px;
-            margin: 0px;
-            padding: 0px;
-            line-height: 40px;
+            width: 71%;
+    font-size: 152%;
+    margin: 0px;
+    padding: 0px;
+    line-height: 31px;
         }
 
         .one .myName {
@@ -105,6 +108,7 @@
             margin-top: 0px;
             margin-bottom: 17px;
             font-size: -webkit-xxx-large;
+            font-size: 348%;
         }
 
         div.centerNavBar img {
@@ -116,11 +120,12 @@
 
         img.mypic {
             position: relative;
-            width: 132%;
-            height: 419px;
-            border-radius: 54%;
-            right: 23px;
+    width: 92%;
+    height: 445px;
+    right: -3px;
+    top: 45px;
         }
+
 
         hr {
             height: 3px;
@@ -132,31 +137,40 @@
        
         .three {
             position: relative;
-            right: 0%;
-            top: 41px;
+            line-height: 230%;
+            right: 4%;
+            top: 18px;
+            color: rgb(177 176 195);
         }
 
         .thirdPara {
-            width: 72%;
+            color: rgb(210 209 231);
+            width: 56%;
             word-spacing: 5px;
-            line-height: 21px;
+            line-height: 24px;
         }
 
         p.seeMore {
             color: rgb(255, 230, 0);
         }
+        .seeMore span{
+            margin-left: 4%;
+        }
+        #log{
+            margin-left: -3%;
+        }
 
         
         .fa {
             font-size: 28px !important;
-            width: 8%;
-            height: 8%;
+            width: 7%;
+            
             color: rgba(211, 167, 63, 255);
             background-color: rgba(68, 67, 73, 255);
             border-radius: 16px;
             text-align: center;
             padding-top: 3px;
-            margin-left: 7px;
+            margin-left: 3%;
         }
 
         #footerPara {
@@ -290,6 +304,16 @@
         p{
             color: #bebdc7;
         }
+        .twoMyPic{
+            z-index: -1;
+              width: 146%;
+    height: 101%;
+    border-radius: 237px;
+    background-color: rgba(45,45,57,255);
+    position: relative;
+    top: -28px;
+    right: 129px;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
@@ -327,14 +351,14 @@
         </section>
         <!-- section two start -->
         <section class="two">
-            <img src="./Images/Mypic.jpg" class="mypic" alt="">
+            <div class="twoMyPic"><img src="./Images/Mypic.png" class="mypic" alt=""></div>
         </section>
         <!-- section three start -->
         <Section class="three">
             <h4>Services</h4>
             <p class="thirdPara">Let's build quality products in programing and design
                 with my services</p>
-            <p class="seeMore">see more &rarr;</p>
+            <p class="seeMore">see more <span>&rarr;</span></p>
 
             <div id="log">
                 <a href="#" class="fa fa-facebook"></a>
